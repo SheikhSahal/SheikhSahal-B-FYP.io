@@ -798,6 +798,10 @@ section {
   max-width: 100%;
   border: 4px solid rgba(255, 255, 255, 0.2);
   position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 .about .about-img::before {
