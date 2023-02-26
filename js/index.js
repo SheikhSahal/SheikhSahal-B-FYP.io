@@ -34,14 +34,14 @@ $(document).ready(function () {
         if (rg >= lf ) {
         mirrorright();
 
-        $('#Character').offset({ left: '0' });
+        $('#character').offset({ left: '0' });
         var r = $('#right').val();
         var f = parseInt($('#right').val());
 
         if (r <= 5) {
 
             for (var i = f; i <= r; i++) {
-                repeatFunction(() => $("#Character").animate({ left: "+=10" }, 2000), 1000, i);
+                repeatFunction(() => $("#character").animate({ left: "+=10" }, 2000), 1000, i);
                 console.log(i , f);
             }
 
@@ -59,7 +59,7 @@ $(document).ready(function () {
             if (l <= 5) {
                 for (var y = k; y <= l; y++) {
                    
-                    repeatFunction(() => $("#Character").animate({ left: "-=10" }, 2000), 1000, y);
+                    repeatFunction(() => $("#character").animate({ left: "-=10" }, 2000), 1000, y);
                     console.log(y)
 
                 }
@@ -80,28 +80,28 @@ $(document).ready(function () {
 
 
     function mirrorright(){
-        var s =  $('#Character').attr('src');
+        var s =  $('#character').attr('src');
         var mirror = s.substr(-5,1);
 
         if (mirror == "1"){
-          $('#Character').attr("src", "Character/1.png");
+          $('#character').attr("src", "Character/1.png");
         }
         else
         {
-          $('#Character').attr("src", "Character/2.png");
+          $('#character').attr("src", "Character/2.png");
         }
     }
 
     function mirrorswipe(){
-        var s =  $('#Character').attr('src');
+        var s =  $('#character').attr('src');
         var mirror = s.substr(-5,1);
 
         if (mirror == "1"){
-          $('#Character').attr("src", "Character/m1.png");
+          $('#character').attr("src", "Character/m1.png");
         }
         else
         {
-          $('#Character').attr("src", "Character/m2.png");
+          $('#character').attr("src", "Character/m2.png");
         }
     }
 
