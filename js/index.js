@@ -41,7 +41,7 @@ $(document).ready(function () {
         if (r <= 5) {
 
             for (var i = f; i <= r; i++) {
-                repeatFunction(() => $("#character").animate({ left: "+=10" }, 2000), 1000, i);
+                repeatFunction(() => $("#character").animate({ left: "+=10" }, 500), 500, i);
                 console.log(i , f);
             }
 
@@ -57,9 +57,10 @@ $(document).ready(function () {
 
             
             if (l <= 5) {
+                mirrorswipe();
                 for (var y = k; y <= l; y++) {
                    
-                    repeatFunction(() => $("#character").animate({ left: "-=10" }, 2000), 1000, y);
+                    repeatFunction(() => $("#character").animate({ left: "-=10" }, 500), 500, y);
                     console.log(y)
 
                 }
