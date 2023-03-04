@@ -38,11 +38,11 @@ $(document).ready(function () {
         var r = $('#right').val();
         var f = parseInt($('#right').val());
 
-        if (r <= 5) {
+        if (r <= 9) {
 
             for (var i = f; i <= r; i++) {
-                repeatFunction(() => $("#character").animate({ left: "+=10" }, 500), 500, i);
-                console.log(i , f);
+                repeatFunction(() => $("#character").animate({ left: "+=30" }, 500), 500, i);
+             //  console.log(i , f);
             }
 
             
@@ -51,17 +51,19 @@ $(document).ready(function () {
             alert("Maximum length of Right is 5.")
         }
 
+        var f = parseInt($('#right').val());
         setTimeout(function () {
             var l = $('#left').val();
             var k = parseInt($('#left').val());
 
             
-            if (l <= 5) {
+
+            if (l <= 9) {
                 mirrorswipe();
                 for (var y = k; y <= l; y++) {
                    
-                    repeatFunction(() => $("#character").animate({ left: "-=10" }, 500), 500, y);
-                    console.log(y)
+                    repeatFunction(() => $("#character").animate({ left: "-=30" }, 500), 500, y);
+                 //   console.log(y)
 
                 }
 
@@ -69,6 +71,7 @@ $(document).ready(function () {
             } else {
                 alert("Maximum length of Left is 5.")
             }
+
         }, 5000);
 
     }
