@@ -94,8 +94,8 @@
   .btn-up {
     background: none;
     border: 0;
-    font-size: 22px;
-    line-height: 3em;
+    /* font-size: 22px; */
+    line-height: 2em;
     position: relative;
     width: 4em;
     height: 3em;
@@ -141,7 +141,7 @@
   .btn-down {
     background: none;
     border: 0;
-    font-size: 22px;
+    /* font-size: 22px; */
     line-height: 4em;
     position: relative;
     width: 6em;
