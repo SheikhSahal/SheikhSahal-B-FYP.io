@@ -142,12 +142,12 @@
     background: none;
     border: 0;
     /* font-size: 22px; */
-    line-height: 4em;
+    /* line-height: 4em; */
     position: relative;
-    width: 6em;
+    width: 5em;
     height: 4em;
     transform: rotate(90deg);
-    margin-top: 3em;
+    margin-top: 2em;
   }
   .btn-down a {
     color: #fff;
