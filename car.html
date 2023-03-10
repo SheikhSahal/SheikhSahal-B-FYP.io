@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Car Racing Game</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <style>
+    #game-container {
+      position: relative;
+      width: 977px;
+      height: 730px;
+      border: 1px solid black;
+      background-image: url('Background/bg.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    #car {
+      position: absolute;
+      bottom: 50px;
+      left: 2%;
+      /* transform: translateX(-50%); */
+      width: 100px;
+      height: 200px;
+      background-image: url('Character/1.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .button-container {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+    }
+
+    .button {
+      margin: 0 10px;
+      padding: 10px;
+      border: 1px solid black;
+      background-color: white;
+      font-size: 100px;
+      cursor: pointer;
+    }
+
+    .gettop{
+      margin-top: 10% !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="game-container">
+    <div id="car"></div>
+  </div>
+
+  <div class="row gettop">
+    <div class="col-md-4 bg-img">
+      <a href="#" id="1bg">
+        <img src="Background/bg.jpg" alt="" srcset="" height="100%" width="100%">
+      </a>
+    </div>
+
+    <div class="col-md-4">
+      <a href="#" id="2bg">
+        <img src="Background/2.jpg" alt="" srcset="" height="100%" width="100%">
+      </a>
+    </div>
+
+    <div class="col-md-4">
+      <a href="#" id="3bg">
+        <img src="Background/3.jpg" alt="" srcset="" height="100%" width="100%">
+      </a>
+    </div>
+  </div>
+
+
+
+  <div class="row gettop">
+    <div class="col-md-6">
+      <a href="#" id="cha1">
+        <img src="Character/select1.png" alt="" height="80%" width="60%">
+
+      </a>
+    </div>
+    <div class="col-md-6">
+      <a href="#" id="cha2">
+        <img src="Character/select2.png" alt="" height="80%" width="60%">
+      </a>
+    </div>
+  </div>
+
+  <div class="button-container">
+    <div class="button" onclick="moveUp()">Up</div>
+    <div class="button" onclick="moveDown()">Down</div>
+    <div class="button" onclick="moveLeft()">Left</div>
+    <div class="button" onclick="moveRight()">Right</div>
+  </div>
+  <script>
+    var car = document.getElementById('car');
+    var container = document.getElementById('game-container');
+    var carSpeed = 40;
+
+    document.getElementById("1bg").addEventListener("click", bg1);
+    document.getElementById("2bg").addEventListener("click", bg2);
+    document.getElementById("3bg").addEventListener("click", bg3);
+
+
+    document.getElementById("cha1").addEventListener("click", cha1);
+    document.getElementById("cha2").addEventListener("click", cha2);
+
+    function bg1() {
+      document.getElementById('game-container').style.backgroundImage = "url('Background/bg.jpg')";
+    }
+
+    function bg2() {
+      document.getElementById('game-container').style.backgroundImage = "url('Background/2.jpg')";
+    }
+    function bg3() {
+      document.getElementById('game-container').style.backgroundImage = "url('Background/3.jpg')";
+    }
+
+
+    function cha1() {
+      document.getElementById('car').style.backgroundImage = "url('Character/1.png')";
+      document.getElementById('car').style.width = "100px";
+    }
+
+    function cha2() {
+      document.getElementById('car').style.backgroundImage = "url('Character/2.png')";
+      document.getElementById('car').style.width = "380px";
+    }
+
+
+
+    function mr1() {
+      document.getElementById('car').style.backgroundImage = "url('Character/1.png')";
+      document.getElementById('car').style.width = "100px";
+    }
+
+    function mr2() {
+      document.getElementById('car').style.backgroundImage = "url('Character/2.png')";
+      document.getElementById('car').style.width = "380px";
+    }
+
+    function M1() {
+      document.getElementById('car').style.backgroundImage = "url('Character/m1.png')";
+      document.getElementById('car').style.width = "100px";
+    }
+
+    function M2() {
+      document.getElementById('car').style.backgroundImage = "url('Character/m2.png')";
+      document.getElementById('car').style.width = "380px";
+    }
+
+    function moveUp() {
+      var newY = car.offsetTop - carSpeed;
+      if (newY >= 0) {
+        car.style.top = newY + 'px';
+      }
+    }
+    function moveDown() {
+      var newY = car.offsetTop + carSpeed;
+      if (newY + car.offsetHeight <= container.offsetHeight) {
+        car.style.top = newY + 'px';
+      }
+    }
+    function moveLeft() {
+      mirrorswipe();
+      var newX = car.offsetLeft - carSpeed;
+      if (newX >= 0) {
+        car.style.left = newX + 'px';
+      }
+    }
+    function moveRight() {
+      mirrorswiper();
+      var newX = car.offsetLeft + carSpeed;
+      if (newX + car.offsetWidth <= container.offsetWidth) {
+        car.style.left = newX + 'px';
+      }
+    }
+
+
+    function mirrorswiper() {
+
+      const main = document.getElementById("car");
+      const styles = window.getComputedStyle(main);
+      const image = styles.backgroundImage;
+      const sub = image.slice(-7, -6);
+
+      if (sub == 1) {
+        mr1()
+      }
+      else {
+        mr2()
+      }
+    }
+
+
+    function mirrorswipe() {
+
+      const main = document.getElementById("car");
+      const styles = window.getComputedStyle(main);
+      const image = styles.backgroundImage;
+      const sub = image.slice(-7, -6);
+
+      if (sub == 1) {
+        M1()
+      }
+      else {
+        M2()
+      }
+    }
+  </script>
+</body>
+
+</html>
