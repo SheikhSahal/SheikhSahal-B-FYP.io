@@ -48,13 +48,17 @@
       cursor: pointer;
     }
 
-    .gettop{
+    .gettop {
       margin-top: 10% !important;
+    }
+
+    .disable-dbl-tap-zoom {
+      touch-action: manipulation;
     }
   </style>
 </head>
 
-<body>
+<body class="disable-dbl-tap-zoom">
   <div id="game-container">
     <div id="car"></div>
   </div>
@@ -101,7 +105,10 @@
     <div class="button" onclick="moveLeft()">Left</div>
     <div class="button" onclick="moveRight()">Right</div>
   </div>
+
   <script>
+
+
     var car = document.getElementById('car');
     var container = document.getElementById('game-container');
     var carSpeed = 40;
