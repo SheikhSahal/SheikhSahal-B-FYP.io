@@ -47,13 +47,10 @@
       font-size: 100px;
       cursor: pointer;
     }
-<<<<<<< HEAD
 
     .gettop{
       margin-top: 10% !important;
     }
-=======
->>>>>>> db54b102b6fd1c5cc7e3558a1e81e93cb7bfbcac
   </style>
 </head>
 
@@ -62,11 +59,7 @@
     <div id="car"></div>
   </div>
 
-<<<<<<< HEAD
   <div class="row gettop">
-=======
-  <div class="row" style="margin-top: 10% !important;">
->>>>>>> db54b102b6fd1c5cc7e3558a1e81e93cb7bfbcac
     <div class="col-md-4 bg-img">
       <a href="#" id="1bg">
         <img src="Background/bg.jpg" alt="" srcset="" height="100%" width="100%">
@@ -88,15 +81,9 @@
 
 
 
-<<<<<<< HEAD
   <div class="row gettop">
     <div class="col-md-6">
       <a href="#" id="cha1">
-=======
-  <div class="row">
-    <div class="col-md-6" >
-      <a href="#" id="cha1" >
->>>>>>> db54b102b6fd1c5cc7e3558a1e81e93cb7bfbcac
         <img src="Character/select1.png" alt="" height="80%" width="60%">
 
       </a>
@@ -108,11 +95,6 @@
     </div>
   </div>
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> db54b102b6fd1c5cc7e3558a1e81e93cb7bfbcac
   <div class="button-container">
     <div class="button" onclick="moveUp()">Up</div>
     <div class="button" onclick="moveDown()">Down</div>
@@ -144,25 +126,16 @@
     }
 
 
-<<<<<<< HEAD
     function cha1() {
-=======
-    function cha1(){
->>>>>>> db54b102b6fd1c5cc7e3558a1e81e93cb7bfbcac
       document.getElementById('car').style.backgroundImage = "url('Character/1.png')";
       document.getElementById('car').style.width = "100px";
     }
 
-<<<<<<< HEAD
     function cha2() {
-=======
-    function cha2(){
->>>>>>> db54b102b6fd1c5cc7e3558a1e81e93cb7bfbcac
       document.getElementById('car').style.backgroundImage = "url('Character/2.png')";
       document.getElementById('car').style.width = "380px";
     }
 
-<<<<<<< HEAD
 
 
     function mr1() {
@@ -185,8 +158,6 @@
       document.getElementById('car').style.width = "380px";
     }
 
-=======
->>>>>>> db54b102b6fd1c5cc7e3558a1e81e93cb7bfbcac
     function moveUp() {
       var newY = car.offsetTop - carSpeed;
       if (newY >= 0) {
@@ -207,10 +178,7 @@
       }
     }
     function moveRight() {
-<<<<<<< HEAD
       mirrorswiper();
-=======
->>>>>>> db54b102b6fd1c5cc7e3558a1e81e93cb7bfbcac
       var newX = car.offsetLeft + carSpeed;
       if (newX + car.offsetWidth <= container.offsetWidth) {
         car.style.left = newX + 'px';
@@ -218,7 +186,6 @@
     }
 
 
-<<<<<<< HEAD
     function mirrorswiper() {
 
       const main = document.getElementById("car");
@@ -248,19 +215,6 @@
       else {
         M2()
       }
-=======
-    function mirrorswipe(){
-        var s =  $('#character').attr('src');
-        var mirror = s.substr(-5,1);
-
-        if (mirror == "1"){
-          $('#character').attr("src", "Character/m1.png");
-        }
-        else
-        {
-          $('#character').attr("src", "Character/m2.png");
-        }
->>>>>>> db54b102b6fd1c5cc7e3558a1e81e93cb7bfbcac
     }
   </script>
 </body>
