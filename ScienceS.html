@@ -49,13 +49,16 @@
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+             <button id='btnSpeak'>Speak!</button>
+            <button id='btnStop'>Stop!</button>
+            <select id='voiceList' style="display: none;"></select> <br><br>
             <div class="about-img">
               <img src="assets/img/Science/sun.gif" alt="">
             </div>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
             <h3>Sun</h3>
-            <p class="fst-italic">
+            <p class="fst-italic" id='txtInput'>
               The sun is the nearest star to our planet; still, the Earth is 4.246 light-years away from the sun.
               Hydrogen and helium are the main elements of the sun's composition. The sun is an important energy source
               for the planet earth. Life on Earth would be impossible without the sun.
@@ -82,12 +85,15 @@
       class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+  <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  
+  <script src="js/voice.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

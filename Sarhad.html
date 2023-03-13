@@ -49,13 +49,16 @@
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+             <button id='btnSpeak'>Speak!</button>
+            <button id='btnStop'>Stop!</button>
+            <select id='voiceList' style="display: none;"></select> <br><br>
             <div class="about-img">
               <img src="assets/img/Culture/sarhad.jpg" alt="">
             </div>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
             <h3>KPK/gilgit baltistan</h3>
-            <p class="fst-italic">
+            <p class="fst-italic" id='txtInput'>
               Pashtun Culture Day has been celebrated on September 23 every year since 2014 in Pakistan and several
               countries throughout the world. The day was designated for promoting the Pashtun culture during a meeting
               of the Afghan Forum, a cross-border peace initiative, in Peshawar that year. Pashtun also spelled Pushtun
@@ -79,12 +82,15 @@
       class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+  <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  
+  <script src="js/voice.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

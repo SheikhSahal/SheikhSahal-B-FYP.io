@@ -49,13 +49,16 @@
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+             <button id='btnSpeak'>Speak!</button>
+            <button id='btnStop'>Stop!</button>
+            <select id='voiceList' style="display: none;"></select> <br><br>
             <div class="about-img">
               <img src="assets/img/Ethics/8.jfif" alt="">
             </div>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
             <h3>Cooperation</h3>
-            <p class="fst-italic">
+            <p class="fst-italic" id='txtInput'>
               Cooperation is an act of extending help to others to attain a goal that is often mutual. Collaboration at
               home is the first step towards developing a sense of cooperation. Doing household chores together and
               listening to each other’s problems are some acts of cooperation that a family should follow. Such actions
@@ -77,12 +80,15 @@
       class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+  <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  
+  <script src="js/voice.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
