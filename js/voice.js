@@ -1,5 +1,5 @@
-var voicelist = responsiveVoice.getVoices();
+var voiceselection = responsiveVoice.getVoices();
 var vselect = $("#voiceselection");
-$.each(voicelist, function() {
+$.each(voiceselection, function() {
         vselect.append($("<option />").val(this.name).text(this.name));
 });

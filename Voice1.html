@@ -9,7 +9,7 @@
    
 </head>
 <style>
-    #txtInput {
+    #text {
         width: 500px;
         height: 200px;
     }
@@ -17,11 +17,11 @@
 
 <body>
 
-    <select id='voiceList' style="display: none;"></select> <br><br>
+    <select id='voiceselection' style="display: none;"></select> <br><br>
 
-    <!-- <input id='txtInput' /> <br><br> -->
+    <!-- <input id='text' /> <br><br> -->
 
-    <p id='txtInput'>
+    <p id='text'>
         Muhammad Ali Jinnah (Urdu pronunciation: [moɦəmːəd̪ əliː d͡ʒɪnːɑːɦ], Gujarati pronunciation: [məɦ(ə)məd̪ əli
         d͡ʒʱiɽ̃ɑ]; born Mahomedali Jinnahbhai; 25 December 1876 – 11 September 1948) was a barrister, politician and the
         founder of Pakistan.[1] Jinnah served as the leader of the All-India Muslim League from 1913 until the inception
@@ -29,10 +29,12 @@
         is revered in Pakistan as the Quaid-i-Azam ("Great Leader") and Baba-i-Qaum ("Father of the Nation"). His
         birthday is observed as a national holiday in Pakistan.
     </p>
-    <button id='btnSpeak'>Speak!</button>
-    <button id='btnStop'>Stop!</button>
+    <button id='btnSpeak' onclick="responsiveVoice.speak($('#text').text(),$('#voiceselection').val());" >Speak!</button>
+    
 
-    <script src="js/voice.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://code.responsivevoice.org/responsivevoice.js?key=IUuDBSP4"></script>
+  <script src="js/voice.js"></script>
 </body>
 
 </html>

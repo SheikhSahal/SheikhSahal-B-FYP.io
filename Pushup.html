@@ -49,16 +49,16 @@
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
-             <button id='btnSpeak'>Speak!</button>
-            <button id='btnStop'>Stop!</button>
-            <select id='voiceList' style="display: none;"></select> <br><br>
+             <button id='btnSpeak' onclick="responsiveVoice.speak($('#text').text(),$('#voiceselection').val());" >Speak!</button>
+            
+            <select id='voiceselection' style="display: none;"></select> <br><br>
             <div class="about-img">
               <img src="assets/img/Sports/push-up.gif" alt="">
             </div>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
             <h3>Push-Ups</h3>
-            <p class="fst-italic" id='txtInput'>
+            <p class="fst-italic" id='text'>
               Traditional pushups are beneficial for building upper body strength. They work the triceps, pectoral
               muscles, and shoulders. Using proper form, they can also strengthen the lower back and core by engaging
               (pulling in) the abdominal muscles.
@@ -87,6 +87,8 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://code.responsivevoice.org/responsivevoice.js?key=IUuDBSP4"></script>
   <script src="js/voice.js"></script>
 
   <!-- Template Main JS File -->
