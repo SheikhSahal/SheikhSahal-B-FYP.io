@@ -19,6 +19,13 @@ if (speechSynthesis !== undefined) {
 
 btnSpeak.addEventListener('click', () => {
 
+    if ('speechSynthesis' in window) {
+        // Web Speech API is supported
+        alert("it's working");
+      } else {
+        alert("it's not working");
+        // Web Speech API is not supported
+      }
     // addEventListener('load', () => {
     // var toSpeak = new SpeechSynthesisUtterance(txtInput.value);
     var toSpeak = new SpeechSynthesisUtterance(txtInput);
