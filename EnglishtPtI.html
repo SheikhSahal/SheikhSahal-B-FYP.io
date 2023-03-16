@@ -48,12 +48,15 @@
     <section id="why-us" class="why-us">
       <div class="container" data-aos="fade-up">
 
+         <button id='btnSpeak' onclick="responsiveVoice.speak($('#text').text(),$('#voiceselection').val());" >Speak!</button>
+            
+        <select id='voiceselection' style="display: none;"></select> <br><br>
         <div class="section-title">
           <h2>Tenses</h2>
           <p>Present Indefinite Tense:</p>
         </div>
 
-        <div class="row">
+        <div class="row" id='text'>
 
           <div class="col-lg-4">
             <div class="box" data-aos="zoom-in" data-aos-delay="100">
