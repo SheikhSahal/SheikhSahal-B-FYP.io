@@ -65,6 +65,7 @@
     .gettop {
       margin-top: 10% !important;
     }
+    html, body {touch-action: none;}
 
     .disable-dbl-tap-zoom {
       /* touch-action: manipulation; */
@@ -130,6 +131,12 @@
 
   <script>
 
+document.addEventListener('touchmove', function(event) {
+    event = event.originalEvent || event;
+    if(event.scale > 1) {
+      event.preventDefault();
+    }
+  }, false);
 
     var car = document.getElementById('car');
     var container = document.getElementById('game-container');
