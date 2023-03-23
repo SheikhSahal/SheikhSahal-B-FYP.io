@@ -7,12 +7,19 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
   <style>
+    body{
+      /* touch-action: pan-x pan-y; */
+      touch-action: none;
+    }
     #game-container {
       position: relative;
-      width: 977px;
+      /* width: 977px; */
+      width: 100%;
       height: 730px;
       border: 1px solid black;
+      margin-top: 25%;
       background-image: url('Background/bg.jpg');
       background-repeat: no-repeat;
       background-size: cover;
@@ -39,9 +46,16 @@
       justify-content: center;
     }
 
+    #heading a {
+      font-size: 100px;
+      text-decoration: none;
+      color: red;
+      font-weight: bolder;
+    }
+
     .button {
-      margin: 0 10px;
-      padding: 10px;
+      margin: 0px 1px;
+    padding: 20px;
       border: 1px solid black;
       background-color: white;
       font-size: 100px;
@@ -53,15 +67,23 @@
     }
 
     .disable-dbl-tap-zoom {
-      touch-action: manipulation;
+      /* touch-action: manipulation; */
+      touch-action: none;
     }
   </style>
 </head>
 
 <body class="disable-dbl-tap-zoom">
+
+  <div id="heading">
+    <a href="#">Play with Toys</a>
+  </div>
+
   <div id="game-container">
     <div id="car"></div>
   </div>
+
+
 
   <div class="row gettop">
     <div class="col-md-4 bg-img">
@@ -140,7 +162,8 @@
 
     function cha2() {
       document.getElementById('car').style.backgroundImage = "url('Character/2.png')";
-      document.getElementById('car').style.width = "380px";
+       document.getElementById('car').style.width = "380px";
+       widthset();
     }
 
 
@@ -189,6 +212,19 @@
       var newX = car.offsetLeft + carSpeed;
       if (newX + car.offsetWidth <= container.offsetWidth) {
         car.style.left = newX + 'px';
+      }
+    }
+
+
+    function widthset(){
+      const main = document.getElementById("car");
+      const styles = window.getComputedStyle(main);
+      const image = styles.left;
+      const sub = image.slice(0, 3);
+      
+      if (sub > 580)
+      {
+        document.getElementById('car').style.left = "580px";
       }
     }
 
