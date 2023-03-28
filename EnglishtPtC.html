@@ -59,6 +59,7 @@
         <div class="row">
 
           <div class="col-lg-4">
+            
             <div class="box" data-aos="zoom-in" data-aos-delay="100">
               <span>01</span>
               <h4>Definition </h4>
@@ -70,7 +71,8 @@
 
 
           <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box" data-aos="zoom-in" data-aos-delay="200">
+            <button id='btnSpeak' onclick="responsiveVoice.speak($('#aff').text(),$('#voiceselection').val());" >Speak!</button>
+            <div class="box" id="aff" data-aos="zoom-in" data-aos-delay="200">
               <span>02</span>
               <h4>Affirmative </h4>
               <p>
