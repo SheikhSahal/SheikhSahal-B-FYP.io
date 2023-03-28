@@ -47,8 +47,9 @@
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us">
       <div class="container" data-aos="fade-up">
-        <button id='btnSpeak' onclick="responsiveVoice.speak($('#text').text(),$('#voiceselection').val());" >Speak!</button>
-            
+        <!-- <button id='btnSpeak' onclick="responsiveVoice.speak($('#text').text(),$('#voiceselection').val());" >Speak!</button> -->
+        <button id='btnSpeak' onclick="play()" >Speak!</button>
+        <audio src="js/audio/PTPI.mp3" id="audio"></audio>
         <select id='voiceselection' style="display: none;"></select> <br><br>
         <div class="section-title">
           <h2>Tenses</h2>
@@ -109,9 +110,7 @@
             </div>
           </div>
 
-          <div id='text'>
-            01 Definition In simple past the action is simply mentioned and understood to have taken place in the past 02 Affirmative Subject+ 2nd form of verb past simple + object I killed a snake He ate a mango 03 Negative Subject+did not +1st form of verb or base form + object He did not eat a mango I did not kill a snake 04 Interrogative Did+ subject + 1st form of verb (or base verb) + object Did I kill a snake Did he eat mango
-          </div>
+      
         </div>
       
       </div>
