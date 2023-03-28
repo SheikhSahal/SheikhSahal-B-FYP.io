@@ -58,7 +58,7 @@
           <p>Past Perfect Tenses:</p>
         </div>
 
-        <div class="row" id='text'>
+        <div class="row">
 
           <div class="col-lg-4">
             <div class="box" data-aos="zoom-in" data-aos-delay="100">
@@ -72,6 +72,7 @@
 
 
           <div class="col-lg-4 mt-4 mt-lg-0">
+            <button id='btnSpeak' onclick="responsiveVoice.speak($('#aff').text(),$('#voiceselection').val());" >Speak!</button>
             <div class="box" data-aos="zoom-in" data-aos-delay="200">
               <span>02</span>
               <h4>Affirmative </h4>
@@ -86,7 +87,8 @@
           </div>
 
           <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box" data-aos="zoom-in" data-aos-delay="300">
+            <button id='btnSpeak' onclick="responsiveVoice.speak($('#neg').text(),$('#voiceselection').val());" >Speak!</button>
+            <div class="box" id="neg" data-aos="zoom-in" data-aos-delay="300">
               <span>03</span>
               <h4> Negative</h4>
               <p>
@@ -103,7 +105,8 @@
         <div class="row">
 
           <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box" data-aos="zoom-in" data-aos-delay="400">
+            <button id='btnSpeak' onclick="responsiveVoice.speak($('#int').text(),$('#voiceselection').val());" >Speak!</button>
+            <div class="box" id="int" data-aos="zoom-in" data-aos-delay="400">
               <span>04</span>
               <h4>Interrogative </h4>
               <p>
@@ -115,7 +118,12 @@
             </div>
           </div>
 
-
+          <div id='text'>
+            01 Definition Past perfect is used to express something that happened before another action in the past
+          </div>
+          <div id="aff">
+            02 Affirmative Subject+ Had + 3rd form of verb or past participle + object He had taken the exam last year. A thief had stolen my watch.
+          </div>
 
 
         </div>
@@ -145,7 +153,8 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
   
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="https://code.responsivevoice.org/responsivevoice.js?key=IUuDBSP4"></script>
+  <!-- <script src="https://code.responsivevoice.org/responsivevoice.js?key=IUuDBSP4"></script> -->
+  <script src="js/voiceapi.js"></script>
   <script src="js/voice.js"></script>
 
   <!-- Template Main JS File -->

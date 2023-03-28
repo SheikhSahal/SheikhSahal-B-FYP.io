@@ -56,9 +56,10 @@
           <p>Present Continuous Tense:</p>
         </div>
 
-        <div class="row" id='text'>
+        <div class="row">
 
           <div class="col-lg-4">
+            
             <div class="box" data-aos="zoom-in" data-aos-delay="100">
               <span>01</span>
               <h4>Definition </h4>
@@ -70,7 +71,8 @@
 
 
           <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box" data-aos="zoom-in" data-aos-delay="200">
+            <button id='btnSpeak' onclick="responsiveVoice.speak($('#aff').text(),$('#voiceselection').val());" >Speak!</button>
+            <div class="box" id="aff" data-aos="zoom-in" data-aos-delay="200">
               <span>02</span>
               <h4>Affirmative </h4>
               <p>
@@ -113,6 +115,9 @@
           </div>
   
   
+          <div id='text'>
+            01 Definition In present continuous, the action is on-going/ still going on and hence continuous.02 Affirmative Subject + is/am/are + 1st form of verb or base verb + ing + object I am playing cricket.He is driving a car.03 Negative Subject + is/am/are + not + 1st form of verb + ing + object.I am not playing cricket.He is not driving a car.04 Interrogative Is/am/are + subject + 1st form of verb or base verb +ing + object Am I playing cricket? Is he driving a car?  
+          </div>
        
   
         </div>
@@ -141,7 +146,8 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
   
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="https://code.responsivevoice.org/responsivevoice.js?key=IUuDBSP4"></script>
+  <!-- <script src="https://code.responsivevoice.org/responsivevoice.js?key=IUuDBSP4"></script> -->
+  <script src="js/voiceapi.js"></script>
   <script src="js/voice.js"></script>
 
   <!-- Template Main JS File -->
