@@ -87,7 +87,8 @@
           </div>
 
           <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box" data-aos="zoom-in" data-aos-delay="300">
+            <button id='btnSpeak' onclick="responsiveVoice.speak($('#neg').text(),$('#voiceselection').val());" >Speak!</button>
+            <div class="box" id="neg" data-aos="zoom-in" data-aos-delay="300">
               <span>03</span>
               <h4> Negative</h4>
               <p>
@@ -104,7 +105,8 @@
         <div class="row">
 
           <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box" data-aos="zoom-in" data-aos-delay="400">
+            <button id='btnSpeak' onclick="responsiveVoice.speak($('#int').text(),$('#voiceselection').val());" >Speak!</button>
+            <div class="box" id="int" data-aos="zoom-in" data-aos-delay="400">
               <span>04</span>
               <h4>Interrogative </h4>
               <p>
