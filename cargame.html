@@ -12,6 +12,7 @@
     body{
       /* touch-action: pan-x pan-y; */
       touch-action: none;
+      background-color: aqua;
     }
     #game-container {
       position: relative;
@@ -49,7 +50,7 @@
     #heading a {
       font-size: 100px;
       text-decoration: none;
-      color: red;
+      color: black;
       font-weight: bolder;
     }
 
@@ -109,15 +110,19 @@
 
 
   <div class="row gettop">
-    <div class="col-md-6">
+    <div class="col-md-4">
       <a href="#" id="cha1">
         <img src="Character/select1.png" alt="" height="80%" width="60%">
-
       </a>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-4">
       <a href="#" id="cha2">
         <img src="Character/select2.png" alt="" height="80%" width="60%">
+      </a>
+    </div>
+    <div class="col-md-4">
+      <a href="#" id="cha3">
+        <img src="Character/select3.png" alt="" height="80%" width="60%">
       </a>
     </div>
   </div>
@@ -149,6 +154,7 @@ document.addEventListener('touchmove', function(event) {
 
     document.getElementById("cha1").addEventListener("click", cha1);
     document.getElementById("cha2").addEventListener("click", cha2);
+    document.getElementById("cha3").addEventListener("click", cha3);
 
     function bg1() {
       document.getElementById('game-container').style.backgroundImage = "url('Background/bg.jpg')";
@@ -173,6 +179,11 @@ document.addEventListener('touchmove', function(event) {
        widthset();
     }
 
+    function cha3() {
+      document.getElementById('car').style.backgroundImage = "url('Character/3.png')";
+      document.getElementById('car').style.width = "190px";
+    }
+
 
 
     function mr1() {
@@ -185,6 +196,11 @@ document.addEventListener('touchmove', function(event) {
       document.getElementById('car').style.width = "380px";
     }
 
+    function mr3() {
+      document.getElementById('car').style.backgroundImage = "url('Character/3.png')";
+      document.getElementById('car').style.width = "190px";
+    }
+
     function M1() {
       document.getElementById('car').style.backgroundImage = "url('Character/m1.png')";
       document.getElementById('car').style.width = "100px";
@@ -193,6 +209,11 @@ document.addEventListener('touchmove', function(event) {
     function M2() {
       document.getElementById('car').style.backgroundImage = "url('Character/m2.png')";
       document.getElementById('car').style.width = "380px";
+    }
+
+    function M3() {
+      document.getElementById('car').style.backgroundImage = "url('Character/m3.png')";
+      document.getElementById('car').style.width = "180px";
     }
 
     function moveUp() {
@@ -246,8 +267,12 @@ document.addEventListener('touchmove', function(event) {
       if (sub == 1) {
         mr1()
       }
-      else {
+      else if(sub == 2){
         mr2()
+      }
+      else
+      {
+        mr3()
       }
     }
 
@@ -262,8 +287,11 @@ document.addEventListener('touchmove', function(event) {
       if (sub == 1) {
         M1()
       }
-      else {
+      else if(sub == 2){
         M2()
+      }
+      else{
+        M3()
       }
     }
   </script>
